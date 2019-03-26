@@ -6,13 +6,15 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using Assignment.Models;
 namespace Assignment
 {
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
+            //System.Data.Entity.Database.SetInitializer(new CollegeDatabaseInitializer());
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
